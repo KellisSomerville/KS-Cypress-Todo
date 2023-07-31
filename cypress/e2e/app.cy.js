@@ -58,8 +58,8 @@ describe('TodoMVC - React', function () {
     cy.get('.new-todo')
     .type('learn testing{enter}')
     .type('be cool{enter}')
-
-    cy.get('.todo-list li').should('have.length', 2)
+     cy.get(".todo-list li").should("have.length", 2);
+     
   })
 
   context('When page is initially opened', function () {
@@ -656,8 +656,11 @@ describe('TodoMVC - React', function () {
       cy.get('.new-todo')
       .type('learn testing{enter}')
       .type('be cool{enter}')
+      .type('Learn cypress{enter}')
+      .type('Invest in yourself{enter}')
+      .type('Make every second count{enter}')
 
-      cy.get('.todo-list li').should('have.length', 2)
+      cy.get('.todo-list li').should('have.length', 5)
       cy.checkA11y(null, {
         runOnly: ['cat.color'],
       })
